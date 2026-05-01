@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Weather App</h1>
+      <p class="subtitle">Search any city for live conditions and today's range.</p>
+
+      <form id="search-form" class="search-row">
+        <input id="city-input" type="text" placeholder="Enter city (e.g., Seattle)" required />
+        <button type="submit">Get Weather</button>
+      </form>
+
+      <button id="location-btn" class="secondary">Use My Location</button>
+
+      <section id="status" aria-live="polite"></section>
+
+      <section id="weather" class="weather hidden" aria-live="polite">
+        <h2 id="place"></h2>
+        <div class="temp-row">
+          <span id="temp"></span>
+          <span id="code"></span>
+        </div>
+        <p id="meta"></p>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
